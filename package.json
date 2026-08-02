@@ -1,0 +1,16 @@
+{
+    "name": "mednexus",
+    "version": "1.0.0",
+    "description": "Healthcare Equipment & Booking Management System",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "backend": "cd backend && set \"JAVA_HOME=D:\\my_jdk\"&& .\\mvnw.cmd spring-boot:run",
+        "frontend": "node server.js",
+        "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "concurrently": "^8.2.2"
+    }
+}

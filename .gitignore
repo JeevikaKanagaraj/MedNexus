@@ -1,0 +1,76 @@
+# ════════════════════════════════════════════
+#  MedNexus — .gitignore
+# ════════════════════════════════════════════
+
+# ── Node / npm ──────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.pnp
+.pnp.js
+
+# ── Java / Maven backend ────────────────────
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+
+# Maven wrapper (optional — keep if present)
+# .mvn/
+# mvnw
+# mvnw.cmd
+
+# ── Environment / Secrets ───────────────────
+.env
+.env.*
+*.env
+application-prod.properties
+application-local.properties
+# Never commit DB credentials
+**/application-secret.properties
+
+# ── IDE & Editor ────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/settings.json
+.vscode/*.log
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# ── OS junk ─────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ── Logs ────────────────────────────────────
+*.log
+logs/
+backend_log.txt
+
+# ── Build artifacts ─────────────────────────
+dist/
+build/
+out/
+
+# ── Test output ─────────────────────────────
+test-results/
+coverage/
+.vscode/
+.next/

@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: mednexus-backend
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: ALLOWED_ORIGINS
+        value: "*"
+
+  - type: web
+    name: mednexus-frontend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: BACKEND_URL
+        fromService:
+          type: web
+          name: mednexus-backend
+          property: host
